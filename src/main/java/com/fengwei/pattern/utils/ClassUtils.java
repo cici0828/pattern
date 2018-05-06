@@ -26,6 +26,10 @@ public class ClassUtils {
         String path = packageName.replace(".", "/");
         Enumeration<URL> urlEnumeration = classLoader.getResources(path);
         List<File> dirs = new ArrayList<File>();
+        while(urlEnumeration.hasMoreElements()){
+            URL resource = urlEnumeration.nextElement();
+            dirs.add(new File(resource.getFile()));
+        }
         return null;
     }
 }
