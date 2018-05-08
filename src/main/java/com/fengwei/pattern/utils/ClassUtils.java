@@ -15,7 +15,7 @@ public class ClassUtils {
 
         if(clzz.isInterface()){
             String packageName = clzz.getPackage().getName();
-            System.out.println(packageName);
+            //System.out.println(packageName);
             try {
                 List<Class> allClass = getClasses(packageName);
                 for(int i=0; i<allClass.size(); i++){

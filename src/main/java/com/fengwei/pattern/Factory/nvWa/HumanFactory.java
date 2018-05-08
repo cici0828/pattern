@@ -25,10 +25,6 @@ public class HumanFactory {
     public static Human createHuman() {
         Human human = null;
         List<Class> concreteHumanList = ClassUtils.getAllClassByInterface(Human.class);
-        System.out.println(concreteHumanList.size());
-        for(Class c: concreteHumanList){
-            System.out.println(c.getName());
-        }
         Random random = new Random();
         int rand = random.nextInt(concreteHumanList.size());
         human = createHuman(concreteHumanList.get(rand));

@@ -23,6 +23,12 @@ public class HumanFactroyTest {
 
     @Test
     public void testHumanFactory02(){
-        HumanFactory.createHuman();
+        for(int i = 0; i<500; i++){
+            Human human = HumanFactory.createHuman();
+            human.cry();;
+            human.laugh();
+            human.talk();
+        }
+
     }
 }
